@@ -4,5 +4,5 @@ export type Testimonial = {
   destination?: string;
   image: any;
   content: string;
-  designation: string;
+  
 };
