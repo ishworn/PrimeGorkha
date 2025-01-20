@@ -58,9 +58,9 @@ const About = () => {
               className="animate_right md:w-1/2"
             >
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                Services
-                <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">
-                  We Offer
+                Services  
+                <span className="relative inline-block before:absolute  before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">
+                   We Offer
                 </span>
               </h2>
               <p>
