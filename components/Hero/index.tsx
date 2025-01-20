@@ -15,20 +15,17 @@ const Hero = () => {
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className=" md:w-1/2">
-              <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
-                🔥 Solid - A Complete SaaS Web Template
-              </h4>
+              { <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
+                🔥 Welcome to PrimeGorkha – Your Gateway to Excellence!
+              </h4>}
               <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">
-                Free Next.js Template for {"   "}
+              Fast, Reliable, and Affordable   {"   "}
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
-                  SaaS
+                Courier Services 
                 </span>
               </h1>
               <p>
-                Solid Pro - Packed with all the key integrations you need for
-                swift SaaS startup launch, including - Auth, Database, Sanity
-                Blog, Essential Components, Pages and More. Built-winth -
-                Next.js 13, React 18 and TypeScript.
+              At PrimeGorkha, we offer fast, reliable, and affordable courier services for both businesses and individuals. With real-time tracking and secure deliveries, we ensure your packages reach their destination quickly and safely, all while keeping costs low.
               </p>
 
               <div className="mt-10">
@@ -38,14 +35,14 @@ const Hero = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       type="text"
-                      placeholder="Enter your email address"
+                      placeholder="Enter your trace id"
                       className="rounded-full border border-stroke px-6 py-2.5 shadow-solid-2 focus:border-primary focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
                     />
                     <button
                       aria-label="get started button"
                       className="flex rounded-full bg-black px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
                     >
-                      Get Started
+                      Trace Package
                     </button>
                   </div>
                 </form>

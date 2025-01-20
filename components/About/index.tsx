@@ -29,7 +29,7 @@ const About = () => {
               className="animate_left relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
             >
               <Image
-                src="/images/about/about-light-01.png"
+                src="/images/about/Cta image.jpg"
                 alt="About"
                 className="dark:hidden"
                 fill
@@ -59,21 +59,20 @@ const About = () => {
               viewport={{ once: true }}
               className="animate_right md:w-1/2"
             >
-              <span className="font-medium uppercase text-black dark:text-white">
+              {/* <span className="font-medium uppercase text-black dark:text-white">
                 <span className="mb-4 mr-4 inline-flex rounded-full bg-meta px-4.5 py-1 text-metatitle uppercase text-white ">
                   New
                 </span>{" "}
                 SaaS Boilerplate for Next.js
-              </span>
+              </span> */}
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
                 A Complete Solution for
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">
-                  SaaS Startup
+                Courier Services
                 </span>
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                ultricies lacus non fermentum ultrices. Fusce consectetur le.
+              Your Trusted Partner for Seamless Deliveries – On Time, Every Time.
               </p>
 
               <div className="mt-7.5 flex items-center gap-5">
@@ -84,7 +83,7 @@ const About = () => {
                 </div>
                 <div className="w-3/4">
                   <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                    React 18, Next.js 13 and TypeScript
+                  Fast & Reliable Deliveries
                   </h3>
                   <p>Ut ultricies lacus non fermentum ultrices.</p>
                 </div>
@@ -97,10 +96,39 @@ const About = () => {
                 </div>
                 <div className="w-3/4">
                   <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                    Fully Customizable
+                  Affordable Pricing
                   </h3>
                   <p>consectetur adipiscing elit fermentum ultricies.</p>
                 </div>
+               
+              </div>
+              <div className="mt-7.5 flex items-center gap-5">
+                <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
+                  <p className="text-metatitle2 font-semibold text-black dark:text-white">
+                    03
+                  </p>
+                </div>
+                <div className="w-3/4">
+                  <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
+                  Real-Time Tracking
+                  </h3>
+                  <p>consectetur adipiscing elit fermentum ultricies.</p>
+                </div>
+               
+              </div>
+              <div className="mt-7.5 flex items-center gap-5">
+                <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
+                  <p className="text-metatitle2 font-semibold text-black dark:text-white">
+                    04
+                  </p>
+                </div>
+                <div className="w-3/4">
+                  <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
+                  Secure Handling
+                  </h3>
+                  <p>consectetur adipiscing elit fermentum ultricies.</p>
+                </div>
+               
               </div>
             </motion.div>
           </div>

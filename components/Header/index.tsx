@@ -144,18 +144,12 @@ const Header = () => {
           </nav>
 
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
-            <Link
-              href=""
-              className="text-regular font-medium text-waterloo hover:text-primary"
-            >
-              Track Your Order
-            </Link>
 
             <Link
               href="https://nextjstemplates.com/templates/solid"
               className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
             >
-              Login / SignUp
+               Login/SignUp
             </Link>
           </div>
         </div>
