@@ -9,8 +9,8 @@ import Contact from "@/components/Contact";
 import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
-  title: "Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate",
-  description: "This is Home for Solid Pro",
+  title: "Prime Gorkha",
+  description: "This is Home page for Prime Gorkha",
   // other metadata
 };
 
