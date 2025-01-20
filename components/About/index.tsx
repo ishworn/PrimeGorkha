@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       {/* <!-- ===== About Start ===== --> */}
-      <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30 mt-15"> {/* Added mt-12 here */}
+      <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30 mt-14"> {/* Added mt-12 here */}
   <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
     <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-32.5">
       <motion.div
