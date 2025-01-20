@@ -49,9 +49,6 @@ const Hero = () => {
                   </div>
                 </form>
 
-                <p className="mt-5 text-black dark:text-white">
-                
-                </p>
               </div>
             </div>
 
