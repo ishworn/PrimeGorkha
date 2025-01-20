@@ -16,7 +16,6 @@ const About = () => {
                   opacity: 0,
                   x: -20,
                 },
-
                 visible: {
                   opacity: 1,
                   x: 0,
@@ -47,7 +46,6 @@ const About = () => {
                   opacity: 0,
                   x: 20,
                 },
-
                 visible: {
                   opacity: 1,
                   x: 0,
@@ -59,20 +57,14 @@ const About = () => {
               viewport={{ once: true }}
               className="animate_right md:w-1/2"
             >
-              {/* <span className="font-medium uppercase text-black dark:text-white">
-                <span className="mb-4 mr-4 inline-flex rounded-full bg-meta px-4.5 py-1 text-metatitle uppercase text-white ">
-                  New
-                </span>{" "}
-                SaaS Boilerplate for Next.js
-              </span> */}
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                A Complete Solution for
+                Services
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">
-                Courier Services
+                  We Offer
                 </span>
               </h2>
               <p>
-              Your Trusted Partner for Seamless Deliveries – On Time, Every Time.
+                Urgent? Get it there today with our delivery service.
               </p>
 
               <div className="mt-7.5 flex items-center gap-5">
@@ -83,9 +75,9 @@ const About = () => {
                 </div>
                 <div className="w-3/4">
                   <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                  Fast & Reliable Deliveries
+                    International Shipping
                   </h3>
-                  <p>Ut ultricies lacus non fermentum ultrices.</p>
+                  <p>Affordable and reliable international courier service for global reach.</p>
                 </div>
               </div>
               <div className="mt-7.5 flex items-center gap-5">
@@ -96,11 +88,10 @@ const About = () => {
                 </div>
                 <div className="w-3/4">
                   <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                  Affordable Pricing
+                    Package Tracking
                   </h3>
-                  <p>consectetur adipiscing elit fermentum ultricies.</p>
+                  <p>Real-time tracking updates for full visibility on your shipment.</p>
                 </div>
-               
               </div>
               <div className="mt-7.5 flex items-center gap-5">
                 <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
@@ -110,25 +101,10 @@ const About = () => {
                 </div>
                 <div className="w-3/4">
                   <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                  Real-Time Tracking
+                    Fragile Item Handling
                   </h3>
-                  <p>consectetur adipiscing elit fermentum ultricies.</p>
+                  <p>Secure packaging and handling for delicate and valuable items.</p>
                 </div>
-               
-              </div>
-              <div className="mt-7.5 flex items-center gap-5">
-                <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
-                  <p className="text-metatitle2 font-semibold text-black dark:text-white">
-                    04
-                  </p>
-                </div>
-                <div className="w-3/4">
-                  <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                  Secure Handling
-                  </h3>
-                  <p>consectetur adipiscing elit fermentum ultricies.</p>
-                </div>
-               
               </div>
             </motion.div>
           </div>
@@ -146,7 +122,6 @@ const About = () => {
                   opacity: 0,
                   x: -20,
                 },
-
                 visible: {
                   opacity: 1,
                   x: 0,
@@ -158,18 +133,14 @@ const About = () => {
               viewport={{ once: true }}
               className="animate_left md:w-1/2"
             >
-              <h4 className="font-medium uppercase text-black dark:text-white">
-                Launch Your SaaS Fast
-              </h4>
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                Packed with All Essential {"   "}
+                Why Choose
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">
-                  Integrations
+                  PrimeGorkha?
                 </span>
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                ultricies lacus non fermentum ultrices. Fusce consectetur le.
+                At PrimeGorkha, we offer reliable and fast courier services that ensure your packages are delivered on time, every time. Whether you're shipping locally or internationally, we’ve got you covered with affordable rates and secure handling for all types of parcels. Our global reach means you can trust us for shipments anywhere in the world, while our dedicated 24/7 customer support team is always ready to assist you. Choose PrimeGorkha for hassle-free, efficient, and trustworthy courier services that put your needs first.
               </p>
               <div>
                 <a
@@ -196,7 +167,6 @@ const About = () => {
                   opacity: 0,
                   x: 20,
                 },
-
                 visible: {
                   opacity: 1,
                   x: 0,
@@ -206,14 +176,20 @@ const About = () => {
               whileInView="visible"
               transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_right relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
+              className="animate_right relative mx-auto hidden md:block md:w-1/2"
             >
-              <Image
-                src="./images/about/about-light-02.svg"
-                alt="About"
-                className="dark:hidden"
-                fill
-              />
+              <div className="relative w-full h-full">
+                <video
+                  className="object-cover w-full h-full"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  <source src="./images/about/cta.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
               <Image
                 src="./images/about/about-dark-02.svg"
                 alt="About"
