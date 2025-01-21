@@ -46,7 +46,7 @@ const Footer = () => {
                   />
                 </a>
                 <p className="mt-4 text-black dark:text-white">
-                  Your trusted brand for products.
+                  Where Service Meets Speed.
                 </p>
               </motion.div>
 
@@ -133,9 +133,7 @@ const Footer = () => {
                 viewport={{ once: true }}
                 className="animate_top w-full md:w-2/4"
               >
-               <h3 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white text-center">
-  Contact Us
-</h3>
+              
 
                 <div className="w-full h-80 mb-7">
         <iframe
@@ -170,7 +168,11 @@ const Footer = () => {
             viewport={{ once: true }}
             className="animate_top"
           >
-            <p>&copy; {new Date().getFullYear()} Solid. All rights reserved.</p>
+         <div className="flex justify-center items-center w-full">
+  <p className="text-center">&copy; {new Date().getFullYear()}  PrimeGurkha. All rights reserved.</p>
+</div>
+
+
           </motion.div>
 
           {/* Social Media Icons */}
