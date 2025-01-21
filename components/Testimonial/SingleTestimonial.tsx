@@ -12,7 +12,16 @@ const SingleTestimonial = ({ review }: { review: Testimonial }) => {
           </h3>
       
         </div>
-        <Image width={60} height={50} className="rounded-full" src={image} alt={name} />
+        <div style={{ width: '60px', height: '60px', overflow: 'hidden', borderRadius: '50%' }}>
+  <Image
+    width={60}
+    height={60}
+    style={{ objectFit: 'cover' }} // Ensures image is centered and cropped if necessary
+    src={image}
+    alt={name}
+  />
+</div>
+
 
       </div>
 
