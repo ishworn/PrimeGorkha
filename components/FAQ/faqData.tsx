@@ -3,7 +3,7 @@ import { FAQ } from "@/types/faq";
 const faqData: FAQ[] = [
   {
     id: 1,
-    quest: "What courier services do you offer?",
+    quest: "What courier services we offer?",
     ans: "We provide reliable and fast delivery services for both local and international shipments. Our services include same-day delivery, next-day delivery, express shipping, and standard shipping options",
   },
   {
