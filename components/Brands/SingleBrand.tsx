@@ -1,10 +1,10 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import { Brand } from "@/types/brand";
 import { motion } from "framer-motion";
 
 const SingleBrand = ({ brand }: { brand: Brand }) => {
-  const { image, href, name, imageLight, id } = brand;
+  const { image, href, name, id } = brand;
 
   return (
     <>
@@ -14,7 +14,6 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
             opacity: 0,
             y: -20,
           },
-
           visible: {
             opacity: 1,
             y: 0,
@@ -28,14 +27,8 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
         className="animate_top mx-w-full relative block h-10 w-[98px]"
       >
         <Image
-          className="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+          className="opacity-65 transition-all duration-300 hover:opacity-100 dark:opacity-50"
           src={image}
-          alt={name}
-          fill
-        />
-        <Image
-          className="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
-          src={imageLight}
           alt={name}
           fill
         />
@@ -45,3 +38,4 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
 };
 
 export default SingleBrand;
+
