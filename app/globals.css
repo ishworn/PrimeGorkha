@@ -135,9 +135,3 @@ pre {
 .active-tab {
   @apply bg-stroke text-black dark:bg-blackho dark:text-white;
 }
-
-body {
-  background: rgb(0, 204, 255);
-  background: linear-gradient(90deg, rgba(0, 204, 255, 1) 0%, rgba(0, 151, 255, 1) 54%, rgba(0, 121, 255, 1) 98%);
-  opacity: 0.5;
-}

@@ -33,6 +33,10 @@ export default function Slider() {
             gap: 0,
         }).mount();
 
+        // Trigger a resize event after mounting to recalculate layout
+        const resizeEvent = new Event("resize");
+        window.dispatchEvent(resizeEvent);
+
         return () => {
             slider.destroy();
         };
