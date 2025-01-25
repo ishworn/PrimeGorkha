@@ -4,6 +4,22 @@
 
 /* third-party libraries CSS */
 
+
+
+/* globals.css */
+
+/* Force light mode */
+:root {
+  color-scheme: light;
+}
+
+/* Optional: Override dark mode specific styling if you had any */
+html {
+  background-color: white;
+  color: black;
+}
+
+
 .testimonial-01 .swiper-pagination-bullet {
   @apply h-2.5 w-2.5 bg-stroke opacity-100;
 }
