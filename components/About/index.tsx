@@ -9,7 +9,7 @@ const About = () => {
       {/* <!-- ===== About Start ===== --> */}
       <section className="overflow-hidden py-18 lg:pb-25 xl:pb-30">
         <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
-          <div className="flex items-center gap-8 lg:gap-32.5">
+          <div className="flex flex-col md:flex-row-reverse items-center gap-8 lg:gap-32.5">
             <motion.div
               variants={{
                 hidden: {
@@ -58,15 +58,15 @@ const About = () => {
               className="animate_right md:w-1/2"
             >
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero mr-2">
-                Services  
-                <span className="relative inline-block before:absolute  before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">
-                   We Offer
+                Services
+                <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">
+                  We Offer
                 </span>
               </h2>
               <p>
                 Urgent? Get it there today with our delivery service.
               </p>
-
+              {/* Services list */}
               <div className="mt-7.5 flex items-center gap-5">
                 <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
                   <p className="text-metatitle2 font-semibold text-black dark:text-white">
@@ -77,7 +77,10 @@ const About = () => {
                   <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
                     International Shipping
                   </h3>
-                  <p>Affordable and reliable international courier service for global reach.</p>
+                  <p>
+                    Affordable and reliable international courier service for
+                    global reach.
+                  </p>
                 </div>
               </div>
               <div className="mt-7.5 flex items-center gap-5">
@@ -90,7 +93,10 @@ const About = () => {
                   <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
                     Package Tracking
                   </h3>
-                  <p>Real-time tracking updates for full visibility on your shipment.</p>
+                  <p>
+                    Real-time tracking updates for full visibility on your
+                    shipment.
+                  </p>
                 </div>
               </div>
               <div className="mt-7.5 flex items-center gap-5">
@@ -103,7 +109,10 @@ const About = () => {
                   <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
                     Fragile Item Handling
                   </h3>
-                  <p>Secure packaging and handling for delicate and valuable items.</p>
+                  <p>
+                    Secure packaging and handling for delicate and valuable
+                    items.
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -115,7 +124,7 @@ const About = () => {
       {/* <!-- ===== About Two Start ===== --> */}
       <section>
         <div className="mx-auto max-w-c-1235 overflow-hidden px-4 md:px-8 2xl:px-0">
-          <div className="flex items-center gap-8 lg:gap-32.5">
+          <div className="flex flex-col-reverse md:flex-row items-center gap-8 lg:gap-32.5">
             <motion.div
               variants={{
                 hidden: {
@@ -140,7 +149,15 @@ const About = () => {
                 </span>
               </h2>
               <p>
-                At PrimeGorkha, we offer reliable and fast courier services that ensure your packages are delivered on time, every time. Whether you're shipping locally or internationally, we’ve got you covered with affordable rates and secure handling for all types of parcels. Our global reach means you can trust us for shipments anywhere in the world, while our dedicated 24/7 customer support team is always ready to assist you. Choose PrimeGorkha for hassle-free, efficient, and trustworthy courier services that put your needs first.
+                At PrimeGorkha, we offer reliable and fast courier services that
+                ensure your packages are delivered on time, every time. Whether
+                you're shipping locally or internationally, we’ve got you
+                covered with affordable rates and secure handling for all types
+                of parcels. Our global reach means you can trust us for
+                shipments anywhere in the world, while our dedicated 24/7
+                customer support team is always ready to assist you. Choose
+                PrimeGorkha for hassle-free, efficient, and trustworthy courier
+                services that put your needs first.
               </p>
               <div>
                 <a
@@ -176,7 +193,7 @@ const About = () => {
               whileInView="visible"
               transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_right relative mx-auto hidden md:block md:w-1/2"
+              className="animate_right relative mx-auto block md:w-1/2"
             >
               <div className="relative w-full h-full">
                 <video
@@ -186,12 +203,16 @@ const About = () => {
                   muted
                   playsInline
                 >
-                  <source src="./images/about/cta.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
+                  <source src="/images/about/cta.mp4" type="video/mp4" />
+                  <img
+                    src="/images/about/cta-fallback.jpg"
+                    alt="Video fallback"
+                    className="object-cover w-full h-full"
+                  />
                 </video>
               </div>
               <Image
-                src="./images/about/about-dark-02.svg"
+                src="/images/about/about-dark-02.svg"
                 alt="About"
                 className="hidden dark:block"
                 fill
