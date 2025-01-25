@@ -4,6 +4,56 @@
 
 /* third-party libraries CSS */
 
+
+
+
+
+
+
+
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light;
+    background-color: white;
+    color: black;
+  }
+}
+
+/* Set default light mode styles */
+html {
+  background-color: white;
+  color: black;
+}
+
+
+
+
+
+
+/* globals.css */
+
+/* Force light mode when the class "no-dark-mode" is present on <html> */
+html.no-dark-mode {
+  background-color: white;
+  color: black;
+}
+
+/* Prevent dark mode styling from applying */
+html.no-dark-mode * {
+  background-color: white !important;
+  color: black !important;
+}
+
+
+
+
+
+
+
+
 .testimonial-01 .swiper-pagination-bullet {
   @apply h-2.5 w-2.5 bg-stroke opacity-100;
 }
