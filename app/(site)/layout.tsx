@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Lines from "@/components/Lines";
@@ -16,11 +15,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  useEffect(() => {
-    // Force light mode on load
-    document.documentElement.classList.add("no-dark-mode");
-  }, []);
-
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
