@@ -21,8 +21,7 @@ export default function Slider() {
             id: 4,
             imgSrc: "/images/cargo/img4.png",
         }
-    ]
-
+    ];
 
     useEffect(() => {
         const slider = new Glide(".glide-05", {
@@ -32,79 +31,49 @@ export default function Slider() {
             autoplay: 3000,
             animationDuration: 700,
             gap: 0,
-            classes: {
-                nav: {
-                    active: "[&>*]:bg-wuiSlate-800",
-                },
-            },
-        }).mount()
-
-        // Trigger a resize event after mounting to recalculate layout
-        const resizeEvent = new Event("resize");
-        window.dispatchEvent(resizeEvent);
+        }).mount();
 
         return () => {
-            slider.destroy()
-        }
-    }, [])
-
+            slider.destroy();
+        };
+    }, []);
 
     return (
         <>
-            {/*<!-- Component: Slider with indicators outside --> */}
+            {/* Slider with indicators outside */}
             <div className="relative w-full glide-05">
-                {/*    <!-- Slides --> */}
+                {/* Slides */}
                 <div className="overflow-hidden" data-glide-el="track">
-                    <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0">
+                    <ul className="relative flex w-full h-full p-0 m-0 transition-transform duration-500 ease-in-out" style={{ listStyle: 'none' }}>
                         {slideImg.map((item) => (
-                            <li key={item.id}>
+                            <li key={item.id} className="w-full flex-shrink-0">
                                 <Image
                                     src={item.imgSrc}
-                                    className="w-full max-w-full max-h-full"
-                                    alt="image"
+                                    className="w-full h-auto object-contain rounded-lg shadow-lg"  // Added rounded-lg and shadow
+                                    alt={`image-${item.id}`}
                                     width={600}
                                     height={300}
+                                    priority={true} // Ensures that the image is prioritized for loading
                                 />
                             </li>
                         ))}
                     </ul>
                 </div>
-                {/*    <!-- Indicators --> */}
-                <div
-                    className="flex items-center justify-center w-full gap-2"
-                    data-glide-el="controls[nav]"
-                >
-                    <button
-                        className="p-4 group"
-                        data-glide-dir="=0"
-                        aria-label="goto slide 1"
-                    >
-                        <span className="block w-2 h-2 transition-colors duration-300 rounded-full bg-white/20 ring-1 ring-slate-700 focus:outline-none"></span>
-                    </button>
-                    <button
-                        className="p-4 group"
-                        data-glide-dir="=1"
-                        aria-label="goto slide 2"
-                    >
-                        <span className="block w-2 h-2 transition-colors duration-300 rounded-full bg-white/20 ring-1 ring-slate-700 focus:outline-none"></span>
-                    </button>
-                    <button
-                        className="p-4 group"
-                        data-glide-dir="=2"
-                        aria-label="goto slide 3"
-                    >
-                        <span className="block w-2 h-2 transition-colors duration-300 rounded-full bg-white/20 ring-1 ring-slate-700 focus:outline-none"></span>
-                    </button>
-                    <button
-                        className="p-4 group"
-                        data-glide-dir="=3"
-                        aria-label="goto slide 4"
-                    >
-                        <span className="block w-2 h-2 transition-colors duration-300 rounded-full bg-white/20 ring-1 ring-slate-700 focus:outline-none"></span>
-                    </button>
+
+                {/* Indicators */}
+                <div className="flex items-center justify-center w-full gap-2 mt-4" data-glide-el="controls[nav]">
+                    {slideImg.map((item, index) => (
+                        <button
+                            key={item.id}
+                            className="p-4 group"
+                            data-glide-dir={`=${index}`}
+                            aria-label={`goto slide ${index + 1}`}
+                        >
+                            <span className="block w-2 h-2 transition-colors duration-300 rounded-full bg-white/20 ring-1 ring-slate-700 focus:outline-none"></span>
+                        </button>
+                    ))}
                 </div>
             </div>
-            {/*<!-- End Slider with indicators outside --> */}
         </>
-    )
+    );
 }
