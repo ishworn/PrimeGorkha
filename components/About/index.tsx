@@ -3,6 +3,9 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+//importing components
+import Slider from "@/components/Hero/Slider";
+
 const About = () => {
   return (
     <>
@@ -196,20 +199,7 @@ const About = () => {
               className="animate_right relative mx-auto block md:w-1/2"
             >
               <div className="relative w-full h-full">
-                <video
-                  className="object-cover w-full h-full"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                >
-                  <source src="/images/about/cta.mp4" type="video/mp4" />
-                  <img
-                    src="/images/about/cta-fallback.jpg"
-                    alt="Video fallback"
-                    className="object-cover w-full h-full"
-                  />
-                </video>
+                  <Slider/>
               </div>
               <Image
                 src="/images/about/about-dark-02.svg"

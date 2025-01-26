@@ -1,8 +1,8 @@
 "use client"
 
 import React, { useState } from 'react';
-import Breadcrumbs from "@/breadcrumbs/Breadcrumbs";
-import style from "./Career.module.css"
+import Breadcrumbs from "@/utils/breadcrumbs/Breadcrumbs";
+import style from "./Career.module.css";
 
 function Career() {
   const [isVacancancyAvaiable, setIsVacancancyAvaiable] = useState(false);

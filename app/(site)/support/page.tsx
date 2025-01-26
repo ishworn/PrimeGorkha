@@ -8,11 +8,15 @@ export const metadata: Metadata = {
   // other metadata
 };
 
+//import components
+import Breadcrumbs from "@/utils/breadcrumbs/Breadcrumbs";
+
 const SupportPage = () => {
   return (
-    <div className="pb-20 pt-40">
+    <>
+      <Breadcrumbs title={"Reach OUt to Us"} desc={"Get in touch with us"} />
       <Contact />
-    </div>
+    </>
   );
 };
 

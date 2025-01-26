@@ -2,9 +2,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 import menuData from "./menuData";
+
+//importing utils
+import {useOnClickOutside} from "@/utils/use-onclick-outside-hooks"
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -25,6 +28,11 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
   });
+
+  //on clicking to screen area clos the nav
+  // Function to toggle the sidebar while clicking outside the sidebar or clicking esc key
+  const navRef = useRef<HTMLDivElement | null>(null);
+  useOnClickOutside(navRef, () => setNavigationOpen(false))
 
   return (
     <header
@@ -84,11 +92,11 @@ const Header = () => {
         {/* Nav Menu Start   */}
         <div
           className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${navigationOpen &&
-            "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+            "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-transparent p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
             }`}
         >
-          <nav>
-            <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
+          <nav ref={navRef}>
+            <ul className={`flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10 ${stickyMenu? "text-black" : "text-white"}`}>
               {menuData.map((menuItem, key) => (
                 <li key={key} className={menuItem.submenu && "group relative"}>
                   {menuItem.submenu ? (
@@ -113,7 +121,7 @@ const Header = () => {
                         className={`dropdown ${dropdownToggler ? "flex" : ""}`}
                       >
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="hover:text-primary">
+                          <li key={key} className="hover:text-primary text-black">
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
@@ -127,6 +135,7 @@ const Header = () => {
                           ? "text-primary hover:text-primary"
                           : "hover:text-primary"
                       }
+                      onClick={() => setNavigationOpen(!navigationOpen)}
                     >
                       {menuItem.title}
                     </Link>
