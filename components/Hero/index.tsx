@@ -4,6 +4,9 @@ import { useState } from "react";
 //import components
 import Slider from "./Slider";
 
+//import styles
+import styles from "./hero.module.css";
+
 const Hero = () => {
   const [email, setEmail] = useState("");
 
@@ -17,7 +20,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className="overflow-hidden pb-20 pt-28 md:pt-30 xl:pb-25 xl:pt-32">
+      <section className={`overflow-hidden pb-20 pt-28 md:pt-30 xl:pb-25 xl:pt-32 ${styles.background}`}>
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           {/* Added gap between text and slider */}
           <div className="flex flex-col lg:flex-row lg:items-center lg:gap-8 xl:gap-32.5 gap-y-10">
