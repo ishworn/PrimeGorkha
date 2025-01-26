@@ -1,48 +1,115 @@
-import React from 'react'
+"use client"
 
-function Breadcrumbs() {
+import React from 'react';
+import style from "./breadcrumbs.module.css";
+import { usePathname } from 'next/navigation';
+
+function Breadcrumbs({title,desc}) {
+    // Get the current path from the URL and convert it to uppercase
+    const currentPath = usePathname().toUpperCase();
+
+    // Simplified breadcrumbs data
+    const breadcrumbs = [
+        {
+            path: "Home",
+        },
+        {
+            path: currentPath,
+        },
+    ];
+
     return (
         <>
-            <header className="border-b border-gray-200 bg-gray-50">
+            <header
+                className={`border-b border-gray-200 bg-red-50 pt-35 pb-12 ${style.breadcrumbCont}`}
+            >
                 <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
                     <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
                         <div>
-                            <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">Blog Posts</h1>
+                            <h1 className="text-2xl font-bold text-white sm:text-3xl">{title}</h1>
 
-                            <p className="mt-1.5 text-sm text-gray-500">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, recusandae.
+                            <p className="mt-1.5 text-sm text-white">
+                                {desc}
                             </p>
                         </div>
 
                         <div className="flex items-center gap-4">
-                            <button
-                                className="inline-flex items-center justify-center gap-1.5 rounded border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:outline-none focus:ring"
-                                type="button"
-                            >
-                                <span className="text-sm font-medium"> View Website </span>
+                            <ol className="flex h-14 list-none items-stretch gap-2 rounded bg-white px-4 shadow-md shadow-slate-200">
+                                {breadcrumbs.map((item, index) => {
+                                    return (
+                                        <li
+                                            className={`${index === 0
+                                                    ? "flex items-center gap-2"
+                                                    : "flex items-center gap-2"
+                                                }`}
+                                            key={index}
+                                        >
+                                            <a
+                                                href="javascript:void(0)"
+                                                className={`${index === breadcrumbs.length - 1
+                                                        ? "pointer-events-none max-w-[20ch] items-center gap-1 truncate whitespace-nowrap text-slate-400"
+                                                        : "flex max-w-[20ch] items-center gap-1 truncate whitespace-nowrap text-slate-700 transition-colors hover:text-yellow-500"
+                                                    }`}
+                                            >
+                                                {index === 0 ? (
+                                                    <>
+                                                        <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            className="h-5 w-5"
+                                                            fill="none"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            strokeWidth="1.5"
+                                                            aria-hidden="true"
+                                                            aria-labelledby={`aria-main-title-0${index} aria-main-description-0${index}`}
+                                                            role="link"
+                                                        >
+                                                            <title id="title">Home</title>
+                                                            <desc id="description">
+                                                                Home button indicating the homepage of the website.
+                                                            </desc>
+                                                            <path
+                                                                strokeLinecap="round"
+                                                                strokeLinejoin="round"
+                                                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                                                            />
+                                                        </svg>
+                                                        <span>Home</span>
+                                                    </>
+                                                ) : (
+                                                    item.path
+                                                )}
+                                            </a>
 
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="size-4"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                                    />
-                                </svg>
-                            </button>
-
-                            <button
-                                className="inline-block rounded bg-indigo-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring"
-                                type="button"
-                            >
-                                Create Post
-                            </button>
+                                            {index !== breadcrumbs.length - 1 && (
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-4 w-4 flex-none stroke-slate-700 transition-transform md:rotate-180"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                    strokeWidth="1.5"
+                                                    aria-hidden="true"
+                                                    aria-labelledby={`aria-title-0${index} aria-description-0${index}`}
+                                                    role="graphics-symbol"
+                                                >
+                                                    <title id={`title-0${index}`}>Arrow</title>
+                                                    <desc id={`description-0${index}`}>
+                                                        Arrow icon that points to the next page in big screen
+                                                        resolution sizes and previous page in small screen
+                                                        resolution sizes.
+                                                    </desc>
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        d="M15 19l-7-7 7-7"
+                                                    />
+                                                </svg>
+                                            )}
+                                        </li>
+                                    )
+                                })}
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -51,4 +118,4 @@ function Breadcrumbs() {
     )
 }
 
-export default Breadcrumbs
+export default Breadcrumbs;
