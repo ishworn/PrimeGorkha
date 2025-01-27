@@ -34,7 +34,7 @@ const HeroSection = () => {
             Welcome To{" "}
             <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">
               <span className="text-blue-500 mr-2">Prime</span>
-              <span className="text-[#FFA500]">Gorkha</span>
+              <span className="text-[#FFA500]">Gurkha</span>
             </span>
           </h1>
           <p className="text-white">

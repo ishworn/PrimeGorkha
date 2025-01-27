@@ -1,3 +1,4 @@
+// components/Brands/SingleBrand.tsx
 import React from "react";
 import Image from "next/image";
 import { Brand } from "@/types/brand";
@@ -7,35 +8,23 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
   const { image, href, name, id } = brand;
 
   return (
-    <>
-      <motion.a
-        variants={{
-          hidden: {
-            opacity: 0,
-            y: -20,
-          },
-          visible: {
-            opacity: 1,
-            y: 0,
-          },
-        }}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 1, delay: id }}
-        viewport={{ once: true }}
-        href={href}
-        className="animate_top mx-w-full relative block h-10 w-[98px]"
-      >
-        <Image
-          className="opacity-65 transition-all duration-300 hover:opacity-100 dark:opacity-50"
-          src={image}
-          alt={name}
-          fill
-        />
-      </motion.a>
-    </>
+    <motion.a
+   
+     
+      transition={{ duration: 1, delay: id }}
+    
+      href={href}
+      className="block h-20 w-[98px] relative"
+    >
+      <Image
+        className="opacity-65 transition-all duration-300 hover:opacity-100"
+        src={image}
+        alt={name}
+        fill
+        objectFit="contain"
+      />
+    </motion.a>
   );
 };
 
 export default SingleBrand;
-
