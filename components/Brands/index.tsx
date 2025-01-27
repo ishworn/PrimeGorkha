@@ -9,7 +9,7 @@ const CarouselLogo = () => {
   useEffect(() => {
     const slider = new Glide(".glide-09", {
       type: "carousel",
-      autoplay: 3000, // 3 seconds delay for autoplay
+      autoplay: 2000, // 3 seconds delay for autoplay
       animationDuration: 500,
       animationTimingFunc: "linear",
       perView: 3, // Shows 3 brands by default
