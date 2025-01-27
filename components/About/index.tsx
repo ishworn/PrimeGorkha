@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-//importing components
+// Importing components
 import Slider from "@/components/Hero/Slider";
 
 const About = () => {
@@ -127,7 +127,8 @@ const About = () => {
       {/* <!-- ===== About Two Start ===== --> */}
       <section>
         <div className="mx-auto max-w-c-1235 overflow-hidden px-4 md:px-8 2xl:px-0">
-          <div className="flex flex-col-reverse md:flex-row items-center gap-8 lg:gap-32.5">
+          <div className="flex flex-col md:flex-row items-center gap-8 lg:gap-32.5">
+            {/* Text Content */}
             <motion.div
               variants={{
                 hidden: {
@@ -143,7 +144,7 @@ const About = () => {
               whileInView="visible"
               transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_left md:w-1/2"
+              className="animate_left md:w-1/2 w-full" // Ensure full width on small screens
             >
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
                 Why Choose
@@ -151,7 +152,7 @@ const About = () => {
                   PrimeGurkha?
                 </span>
               </h2>
-              <p>
+              <p className="text-base md:text-lg">
                 At PrimeGorkha, we offer reliable and fast courier services that
                 ensure your packages are delivered on time, every time. Whether
                 you're shipping locally or internationally, we’ve got you
@@ -181,6 +182,8 @@ const About = () => {
                 </a>
               </div>
             </motion.div>
+
+            {/* Slider */}
             <motion.div
               variants={{
                 hidden: {
@@ -196,17 +199,11 @@ const About = () => {
               whileInView="visible"
               transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_right relative mx-auto block md:w-1/2"
+              className="animate_right relative mx-auto block md:w-1/2 w-full" // Ensure full width on small screens
             >
               <div className="relative w-full h-full">
-                  <Slider/>
+                <Slider />
               </div>
-              <Image
-                src="/images/about/about-dark-02.svg"
-                alt="About"
-                className="hidden dark:block"
-                fill
-              />
             </motion.div>
           </div>
         </div>

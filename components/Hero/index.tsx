@@ -27,7 +27,7 @@ const HeroSection = () => {
       {/* Overlay and Content */}
       <div className="absolute inset-0 bg-black/50 z-10 flex items-center justify-center p-8 md:p-12 lg:px-16 lg:py-24">
         <div className="text-center ltr:sm:text-left rtl:sm:text-right mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0 w-2/3">
-          <h4 className="mb-4.5 text-lg font-medium text-white">
+          <h4 className="mb-4.5 text-xl font-bold text-white">
             🔥 Ready to ship? Let’s make it happen!
           </h4>
           <h1 className="mb-5 pr-16 text-3xl font-bold text-white xl:text-hero">
